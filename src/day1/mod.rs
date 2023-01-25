@@ -17,4 +17,14 @@ pub fn run(path: &str) {
     lines.sort();
     lines.reverse();
     println!("Max: {}", lines.get(0).unwrap());
+    println!("Max 3: {}", get_top_3(&lines));
+}
+
+fn get_top_3(sums: &Vec<usize>) -> usize{
+    let mut count:usize = 0;
+    for n in 0..3  {
+        println!("{}", sums[n]);
+        count = count + sums[n];
+    }
+    count
 }
